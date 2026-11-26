@@ -510,6 +510,49 @@ button {
   margin-block: 0.85rem 0;
 }
 
+.ad-slot--live {
+  border-style: solid;
+  border-color: var(--border);
+  background-color: transparent;
+  padding: 0.5rem;
+  min-height: auto;
+  overflow: hidden;
+}
+
+.ad-slot--live iframe,
+.ad-slot--live img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.ad-banner-link {
+  display: inline-flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.ad-direct-link-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue-soft), var(--red-soft));
+  border: 1.5px solid var(--blue);
+  color: var(--blue);
+  font-size: 0.96rem;
+  font-weight: 800;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.ad-direct-link-box:hover {
+  transform: translateY(-1px);
+  color: var(--red);
+  border-color: var(--red);
+}
+
 /* ==========================================================================
    Horizontal App Cards Grid
    ========================================================================== */

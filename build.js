@@ -23,6 +23,7 @@ const config = require('./site.config.js');
 
 const ROOT_DIR = __dirname;
 const DATA_PATH = path.join(ROOT_DIR, 'data', 'apps.json');
+const ADS_PATH = path.join(ROOT_DIR, 'data', 'ads.json');
 const APPS_DIR = path.join(ROOT_DIR, 'apps');
 const SEARCH_INDEX_PATH = path.join(ROOT_DIR, 'assets', 'js', 'search-index.js');
 
@@ -47,9 +48,23 @@ function cleanTextForMeta(str, maxLen) {
   return cleaned.slice(0, maxLen - 1).trim() + '…';
 }
 
+function isExternalUrl(url) {
+  const val = String(url || '').trim();
+  return /^(?:https?:)?\/\//i.test(val) || /^data:/i.test(val);
+}
+
+function resolveAssetSrc(assetPath, rootPrefix, fallbackRel = 'assets/images/default-icon.svg') {
+  const val = String(assetPath || '').trim();
+  if (!val) return `${rootPrefix}${fallbackRel}`;
+  if (isExternalUrl(val) || val.startsWith('/')) return val;
+  return `${rootPrefix}${val.replace(/^\.\//, '')}`;
+}
+
 function normalizeUrl(base, relPath) {
+  const val = String(relPath || '').trim();
+  if (isExternalUrl(val)) return val;
   const cleanBase = String(base || '').replace(/\/+$/, '');
-  const cleanRel = String(relPath || '').replace(/^\/+/, '');
+  const cleanRel = val.replace(/^\/+/, '');
   return cleanRel ? `${cleanBase}/${cleanRel}` : `${cleanBase}/`;
 }
 
@@ -62,6 +77,28 @@ function loadApps() {
   const valid = list.filter((item) => item && item.slug);
   valid.sort((a, b) => String(b.updated_at || '').localeCompare(String(a.updated_at || '')));
   return valid;
+}
+
+let cachedAdsConfig = null;
+
+function loadAdsConfig() {
+  if (cachedAdsConfig) return cachedAdsConfig;
+  const fallback = { headCode: '', slots: {} };
+  try {
+    if (!fs.existsSync(ADS_PATH)) {
+      cachedAdsConfig = fallback;
+      return cachedAdsConfig;
+    }
+    const raw = fs.readFileSync(ADS_PATH, 'utf8');
+    const parsed = JSON.parse(raw);
+    cachedAdsConfig = {
+      headCode: String(parsed.headCode || '').trim(),
+      slots: parsed.slots && typeof parsed.slots === 'object' ? parsed.slots : {}
+    };
+  } catch (e) {
+    cachedAdsConfig = fallback;
+  }
+  return cachedAdsConfig;
 }
 
 function getCategoryMeta(catId) {
@@ -186,9 +223,48 @@ function renderFooter(rootPrefix) {
 </footer>`;
 }
 
-function renderAdSlot(commentTag, extraClass) {
-  const cls = extraClass ? `ad-slot ${extraClass}` : 'ad-slot';
-  return `<div class="${cls}" role="region" aria-label="Advertisement">
+function renderAdSlot(commentTag, extraClass, rootPrefix = './') {
+  const ads = loadAdsConfig();
+  const slot = (ads.slots && ads.slots[commentTag]) || { mode: 'placeholder' };
+  const mode = slot.mode || 'placeholder';
+
+  if (mode === 'hidden') {
+    return `<!-- ${commentTag}: hidden -->`;
+  }
+
+  const baseCls = extraClass ? `ad-slot ${extraClass}` : 'ad-slot';
+
+  if (mode === 'html' && String(slot.htmlCode || '').trim()) {
+    return `<div class="${baseCls} ad-slot--live" role="region" aria-label="Advertisement">
+  <!-- ${commentTag} -->
+  ${String(slot.htmlCode).trim()}
+</div>`;
+  }
+
+  if (mode === 'direct_link' && /^https?:\/\//i.test(String(slot.linkUrl || '').trim())) {
+    const href = escapeHtml(String(slot.linkUrl).trim());
+    const label = escapeHtml(String(slot.linkTitle || 'إعلان مموّل — اضغط هنا').trim() || 'إعلان مموّل — اضغط هنا');
+    const imgUrl = String(slot.imageUrl || '').trim();
+
+    if (imgUrl) {
+      const resolvedImg = escapeHtml(resolveAssetSrc(imgUrl, rootPrefix));
+      return `<div class="${baseCls} ad-slot--live" role="region" aria-label="Advertisement">
+  <!-- ${commentTag} -->
+  <a class="ad-banner-link" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${label}">
+    <img src="${resolvedImg}" alt="${label}" loading="lazy" referrerpolicy="no-referrer">
+  </a>
+</div>`;
+    }
+
+    return `<div class="${baseCls} ad-slot--live" role="region" aria-label="Advertisement">
+  <!-- ${commentTag} -->
+  <a class="ad-direct-link-box" href="${href}" target="_blank" rel="nofollow sponsored noopener noreferrer">
+    <span>${label}</span>
+  </a>
+</div>`;
+  }
+
+  return `<div class="${baseCls}" role="region" aria-label="Advertisement">
   <!-- ${commentTag} -->
   <span data-i18n="adLabel">مساحة إعلانية</span>
 </div>`;
@@ -196,12 +272,12 @@ function renderAdSlot(commentTag, extraClass) {
 
 function renderAppCard(app, rootPrefix) {
   const href = `${rootPrefix}apps/${app.slug}.html`;
-  const iconSrc = `${rootPrefix}${app.icon}`;
+  const iconSrc = resolveAssetSrc(app.icon, rootPrefix);
   const fallbackIcon = `${rootPrefix}assets/images/default-icon.svg`;
 
   return `<a class="app-card" href="${href}">
   <div class="app-card-icon-wrap">
-    <img class="app-card-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(app.name_ar)}" loading="lazy" width="72" height="72" onerror="this.onerror=null;this.src='${fallbackIcon}';">
+    <img class="app-card-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(app.name_ar)}" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='${fallbackIcon}';">
   </div>
   <div class="app-card-body">
     <h3 class="app-card-title" data-ar="${escapeHtml(app.name_ar)}" data-en="${escapeHtml(app.name_en)}">${escapeHtml(app.name_ar)}</h3>
@@ -228,6 +304,8 @@ function renderPageShell({
 }) {
   const canonicalUrl = normalizeUrl(config.siteUrl, canonicalPath);
   const fullOgImage = normalizeUrl(config.siteUrl, ogImage);
+  const ads = loadAdsConfig();
+  const headAdBlock = ads.headCode ? `  ${ads.headCode}\n` : '';
   const jsonLdBlock = jsonLd
     ? `  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>\n`
     : '';
@@ -261,7 +339,7 @@ function renderPageShell({
   <link rel="icon" type="image/svg+xml" href="${rootPrefix}assets/images/logo.svg">
   ${renderEarlyThemeLangScript()}
   <link rel="stylesheet" href="${rootPrefix}assets/css/style.css">
-${jsonLdBlock}</head>
+${headAdBlock}${jsonLdBlock}</head>
 <body>
 ${renderHeader(rootPrefix, activeNav)}
 
@@ -467,22 +545,23 @@ function buildAppDetailPage(app, allApps) {
     .filter((item) => item.category === app.category && item.slug !== app.slug)
     .slice(0, 6);
 
+  const fallbackIcon = `${rootPrefix}assets/images/default-icon.svg`;
+  const heroIconSrc = resolveAssetSrc(app.icon, rootPrefix);
   const screenshots = Array.isArray(app.screenshots) ? app.screenshots : [];
   const screenshotsHtml = screenshots.length
     ? screenshots
-        .map(
-          (shot, idx) => `<button class="screenshot-btn" type="button" data-lightbox-src="${rootPrefix}${escapeHtml(shot)}" aria-label="${escapeHtml(app.name_ar)} screenshot ${idx + 1}">
-          <img class="screenshot-img" src="${rootPrefix}${escapeHtml(shot)}" alt="${escapeHtml(app.name_ar)} - ${idx + 1}" loading="lazy">
-        </button>`
-        )
+        .map((shot, idx) => {
+          const shotSrc = resolveAssetSrc(shot, rootPrefix);
+          return `<button class="screenshot-btn" type="button" data-lightbox-src="${escapeHtml(shotSrc)}" aria-label="${escapeHtml(app.name_ar)} screenshot ${idx + 1}">
+          <img class="screenshot-img" src="${escapeHtml(shotSrc)}" alt="${escapeHtml(app.name_ar)} - ${idx + 1}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${fallbackIcon}';">
+        </button>`;
+        })
         .join('\n        ')
     : '';
 
   const similarHtml = similarApps.length
     ? similarApps.map((item) => renderAppCard(item, rootPrefix)).join('\n        ')
     : `<p data-i18n="noSimilar">لا توجد تطبيقات أخرى في هذا القسم حالياً.</p>`;
-
-  const fallbackIcon = `${rootPrefix}assets/images/default-icon.svg`;
 
   const bodyContent = `
     <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -504,10 +583,10 @@ function buildAppDetailPage(app, allApps) {
           <span>•</span>
           <span>${escapeHtml(app.size)}</span>
         </div>
-        ${renderAdSlot('AD_POST_1', 'ad-slot--compact')}
+        ${renderAdSlot('AD_POST_1', 'ad-slot--compact', rootPrefix)}
       </div>
       <div class="app-hero-icon-box">
-        <img src="${rootPrefix}${escapeHtml(app.icon)}" alt="${escapeHtml(app.name_ar)}" width="132" height="132" onerror="this.onerror=null;this.src='${fallbackIcon}';">
+        <img src="${escapeHtml(heroIconSrc)}" alt="${escapeHtml(app.name_ar)}" width="132" height="132" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${fallbackIcon}';">
       </div>
     </section>
 
@@ -524,7 +603,7 @@ function buildAppDetailPage(app, allApps) {
     }
 
     <!-- 3. مربع إعلان داخلي (2) يعلو صندوق الوصف مباشرة -->
-    ${renderAdSlot('AD_POST_2')}
+    ${renderAdSlot('AD_POST_2', '', rootPrefix)}
 
     <!-- 4. مربع وصف التطبيق -->
     <section class="detail-box" aria-labelledby="sec-desc">
@@ -581,7 +660,7 @@ function buildAppDetailPage(app, allApps) {
     </section>
 
     <!-- 6. مربع إعلان داخلي (3) أسفل قسم التحميل -->
-    ${renderAdSlot('AD_POST_3')}
+    ${renderAdSlot('AD_POST_3', '', rootPrefix)}
 
     <!-- 7. قسم تطبيقات مشابهة -->
     <section class="section-block" aria-labelledby="sec-similar">

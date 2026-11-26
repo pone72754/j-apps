@@ -226,6 +226,15 @@
     });
   }
 
+  function resolveAssetSrc(assetPath, rootPrefix) {
+    var val = String(assetPath || '').trim();
+    if (!val) return rootPrefix + 'assets/images/default-icon.svg';
+    if (/^(?:https?:)?\/\//i.test(val) || /^data:/i.test(val) || val.charAt(0) === '/') {
+      return val;
+    }
+    return rootPrefix + val.replace(/^\.\//, '');
+  }
+
   function initInstantSearch() {
     var input = document.getElementById('site-search-input');
     var resultsBox = document.getElementById('site-search-results');
@@ -273,7 +282,8 @@
 
           var img = document.createElement('img');
           img.className = 'search-result-icon';
-          img.src = rootPrefix + app.icon;
+          img.src = resolveAssetSrc(app.icon, rootPrefix);
+          img.referrerPolicy = 'no-referrer';
           img.alt = currentLang === 'ar' ? app.name_ar : app.name_en;
           img.onerror = function () {
             this.onerror = null;
@@ -335,7 +345,13 @@
 
     function show(index) {
       if (!items.length) return;
+      var rootPrefix = document.documentElement.getAttribute('data-root') || './';
       activeIndex = (index + items.length) % items.length;
+      modalImg.referrerPolicy = 'no-referrer';
+      modalImg.onerror = function () {
+        this.onerror = null;
+        this.src = rootPrefix + 'assets/images/default-icon.svg';
+      };
       modalImg.src = items[activeIndex];
       counter.textContent = (activeIndex + 1) + ' / ' + items.length;
       modal.classList.add('open');

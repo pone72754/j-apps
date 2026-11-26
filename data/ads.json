@@ -1,0 +1,48 @@
+{
+  "_تعليمات": "ملف إعدادات الإعلانات لموقع J.apps — يُدار تلقائياً من لوحة التحكم (admin.html) ثم يُحقن في جميع الصفحات عند تشغيل npm run build.",
+  "headCode": "",
+  "slots": {
+    "AD_MAIN_1": {
+      "mode": "placeholder",
+      "htmlCode": "",
+      "linkUrl": "",
+      "linkTitle": "",
+      "imageUrl": ""
+    },
+    "AD_MAIN_2": {
+      "mode": "placeholder",
+      "htmlCode": "",
+      "linkUrl": "",
+      "linkTitle": "",
+      "imageUrl": ""
+    },
+    "AD_MAIN_3": {
+      "mode": "placeholder",
+      "htmlCode": "",
+      "linkUrl": "",
+      "linkTitle": "",
+      "imageUrl": ""
+    },
+    "AD_POST_1": {
+      "mode": "placeholder",
+      "htmlCode": "",
+      "linkUrl": "",
+      "linkTitle": "",
+      "imageUrl": ""
+    },
+    "AD_POST_2": {
+      "mode": "placeholder",
+      "htmlCode": "",
+      "linkUrl": "",
+      "linkTitle": "",
+      "imageUrl": ""
+    },
+    "AD_POST_3": {
+      "mode": "placeholder",
+      "htmlCode": "",
+      "linkUrl": "",
+      "linkTitle": "",
+      "imageUrl": ""
+    }
+  }
+}
