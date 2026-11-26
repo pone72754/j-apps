@@ -1,0 +1,12 @@
+{
+  "name": "j-apps",
+  "version": "1.0.0",
+  "description": "J.apps - Static SEO-optimized bilingual (AR/EN) Apps & Games directory ready for Cloudflare Pages and Netlify.",
+  "scripts": {
+    "build": "node build.js",
+    "admin": "node admin-server.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

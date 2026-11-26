@@ -1,0 +1,1 @@
+window.JAPPS_INDEX = [];

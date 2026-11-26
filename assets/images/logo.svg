@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="jlogo" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#jlogo)"/>
+  <path d="M72 26v46c0 14.36-11.64 26-26 26-9.4 0-17.64-4.98-22.2-12.45l11.2-7.8C37.4 81.8 41.4 84 46 84c6.63 0 12-5.37 12-12V26h14z" fill="#FFFFFF"/>
+  <circle cx="84" cy="34" r="10" fill="#FFFFFF" fill-opacity="0.95"/>
+</svg>

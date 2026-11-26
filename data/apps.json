@@ -1,0 +1,4 @@
+{
+  "_تعليمات_الإضافة": "لإضافة تطبيق أو لعبة جديدة: انسخ أحد العناصر داخل مصفوفة apps وعدّل الحقول (slug بالإنجليزية بدون مسافات، name_ar، name_en، category أحد القيم games أو apps أو store أو social، size، version، os، icon، screenshots، description_ar، description_en، download_url، updated_at بصيغة YYYY-MM-DD)، ثم شغّل الأمر: node build.js لتحديث الموقع بالكامل تلقائياً.",
+  "apps": []
+}
