@@ -12,7 +12,7 @@ module.exports = {
 
   // رابط الموقع النهائي بدون شرطة مائلة في النهاية (يُستخدم في sitemap.xml ووسوم Canonical و OpenGraph)
   // استبدله بدومينك الحقيقي عند الرفع على Cloudflare Pages أو Netlify
-  siteUrl: 'https://j-apps.pages.dev',
+  siteUrl: 'https://j-apps.jamaljamil77077.workers.dev',
 
   // اللغة الافتراضية في ملفات HTML الثابتة المؤرشفة في محركات البحث ('ar' أو 'en')
   defaultLang: 'ar',
