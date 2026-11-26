@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light" data-root="./">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-title-ar="التطبيقات - J.apps" data-title-en="Apps - J.apps">التطبيقات - J.apps</title>
+  <meta name="description" content="تطبيقات مميزة للأندرويد تشمل الأدوات والتواصل والمتاجر البديلة.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://j-apps.jamaljamil77077.workers.dev/apps.html">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="J.apps">
+  <meta property="og:title" content="التطبيقات - J.apps">
+  <meta property="og:description" content="تطبيقات مميزة للأندرويد تشمل الأدوات والتواصل والمتاجر البديلة.">
+  <meta property="og:url" content="https://j-apps.jamaljamil77077.workers.dev/apps.html">
+  <meta property="og:image" content="https://j-apps.jamaljamil77077.workers.dev/assets/images/logo.svg">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="التطبيقات - J.apps">
+  <meta name="twitter:description" content="تطبيقات مميزة للأندرويد تشمل الأدوات والتواصل والمتاجر البديلة.">
+  <meta name="twitter:image" content="https://j-apps.jamaljamil77077.workers.dev/assets/images/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
+  <script>
+(function(){
+  try{
+    var t=localStorage.getItem('japps_theme');
+    if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}
+    var l=localStorage.getItem('japps_lang');
+    if(l!=='ar'&&l!=='en'){
+      var n=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+      l=n.indexOf('ar')===0?'ar':'en';
+    }
+    document.documentElement.lang=l;
+    document.documentElement.dir=l==='ar'?'rtl':'ltr';
+  }catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="brand-top-bar"></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="./index.html" aria-label="J.apps">
+      <div class="brand-logo">
+        <img src="./assets/images/logo.svg" alt="J.apps logo" width="40" height="40">
+      </div>
+      <span class="brand-name">J<span class="brand-dot">.</span>apps</span>
+    </a>
+
+    <!-- الترتيب المطلوب في RTL (من اليمين لليسار): بحث ← لغة ← وضع ليلي ← قائمة -->
+    <div class="header-controls">
+      <div class="header-search">
+        <div class="search-input-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input id="site-search-input" class="search-input" type="search" autocomplete="off" placeholder="ابحث عن تطبيق أو لعبة..." aria-label="ابحث عن تطبيق أو لعبة...">
+        </div>
+        <div id="site-search-results" class="search-results" role="listbox" aria-live="polite"></div>
+      </div>
+
+      <button id="lang-toggle-btn" class="icon-btn lang-btn" type="button" title="Switch to English" aria-label="Switch to English">EN</button>
+
+      <button id="theme-toggle-btn" class="icon-btn" type="button" title="تبديل الوضع الليلي والنهاري" aria-label="تبديل الوضع الليلي والنهاري">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+      </button>
+
+      <button id="menu-toggle-btn" class="icon-btn icon-btn--menu" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="فتح القائمة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+<nav id="nav-drawer" class="nav-drawer" aria-hidden="true" aria-label="Site Navigation">
+  <div class="nav-drawer-header">
+    <span class="nav-drawer-title" data-i18n="menuTitle">أقسام الموقع</span>
+    <button id="nav-close-btn" class="icon-btn" type="button" aria-label="إغلاق القائمة">✕</button>
+  </div>
+  <ul class="nav-list">
+      <li>
+        <a class="nav-link" href="./index.html" data-i18n="navHome">الرئيسية</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./games.html" data-i18n="navGames">ألعاب</a>
+      </li>
+      <li>
+        <a class="nav-link active" href="./apps.html" data-i18n="navApps">تطبيقات</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./store.html" data-i18n="navStore">متجر</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./contact.html" data-i18n="navContact">تواصل</a>
+      </li>
+  </ul>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <div class="page-banner">
+      <h1 data-ar="التطبيقات" data-en="Apps">التطبيقات</h1>
+      <p data-ar="تطبيقات مميزة للأندرويد تشمل الأدوات والتواصل والمتاجر البديلة." data-en="Featured Android apps including utilities, social apps, and app stores.">تطبيقات مميزة للأندرويد تشمل الأدوات والتواصل والمتاجر البديلة.</p>
+    </div>
+
+    <div class="ad-slot" role="region" aria-label="Advertisement">
+  <!-- AD_MAIN_1 -->
+  <span data-i18n="adLabel">مساحة إعلانية</span>
+</div>
+
+    <section class="section-block">
+      <div class="apps-grid">
+        <p data-i18n="noSimilar">لا توجد تطبيقات أخرى في هذا القسم حالياً.</p>
+      </div>
+    </section>
+
+    <div class="ad-slot" role="region" aria-label="Advertisement">
+  <!-- AD_MAIN_2 -->
+  <span data-i18n="adLabel">مساحة إعلانية</span>
+</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span data-i18n="footerRights">جميع الحقوق محفوظة © J.apps</span>
+    <div class="footer-links">
+      <a href="./index.html" data-i18n="navHome">الرئيسية</a>
+      <a href="./games.html" data-i18n="navGames">ألعاب</a>
+      <a href="./apps.html" data-i18n="navApps">تطبيقات</a>
+      <a href="./store.html" data-i18n="navStore">متجر</a>
+      <a href="./contact.html" data-i18n="navContact">تواصل</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/search-index.js" defer></script>
+<script src="./assets/js/app.js" defer></script>
+</body>
+</html>

@@ -23,6 +23,7 @@ npm run admin
    ```bash
    node build.js
    ```
-3. عند النشر على **Cloudflare Pages** أو **Netlify**:
-   - **Build command**: `node build.js`
-   - **Build output directory**: `/` (أو `.`)
+3. عند النشر على **Cloudflare Workers** أو **Cloudflare Pages** أو **Netlify**:
+   - **Build command**: `npm run build`
+   - **Deploy command (Cloudflare Workers)**: `npx wrangler deploy` (يقرأ تلقائياً من [wrangler.jsonc](file:///g:/j-app/wrangler.jsonc) مجلد `dist`)
+   - **Build output directory (Cloudflare Pages / Netlify)**: `dist`

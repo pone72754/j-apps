@@ -25,12 +25,54 @@ const ROOT_DIR = __dirname;
 const DATA_PATH = path.join(ROOT_DIR, 'data', 'apps.json');
 const ADS_PATH = path.join(ROOT_DIR, 'data', 'ads.json');
 const APPS_DIR = path.join(ROOT_DIR, 'apps');
+const DIST_DIR = path.join(ROOT_DIR, 'dist');
 const SEARCH_INDEX_PATH = path.join(ROOT_DIR, 'assets', 'js', 'search-index.js');
 
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
+}
+
+function copyRecursive(src, dest) {
+  if (!fs.existsSync(src)) return;
+  const stat = fs.statSync(src);
+  if (stat.isDirectory()) {
+    ensureDir(dest);
+    for (const entry of fs.readdirSync(src)) {
+      copyRecursive(path.join(src, entry), path.join(dest, entry));
+    }
+  } else {
+    ensureDir(path.dirname(dest));
+    fs.copyFileSync(src, dest);
+  }
+}
+
+function buildDistFolder() {
+  fs.rmSync(DIST_DIR, { recursive: true, force: true });
+  ensureDir(DIST_DIR);
+
+  const rootFiles = [
+    'index.html',
+    'latest.html',
+    'contact.html',
+    '404.html',
+    'sitemap.xml',
+    'robots.txt',
+    '_headers',
+    ...config.categories.map((c) => c.page)
+  ];
+
+  for (const file of rootFiles) {
+    const src = path.join(ROOT_DIR, file);
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, path.join(DIST_DIR, file));
+    }
+  }
+
+  copyRecursive(APPS_DIR, path.join(DIST_DIR, 'apps'));
+  copyRecursive(path.join(ROOT_DIR, 'assets'), path.join(DIST_DIR, 'assets'));
+  copyRecursive(path.join(ROOT_DIR, 'img'), path.join(DIST_DIR, 'img'));
 }
 
 function escapeHtml(str) {
@@ -818,7 +860,10 @@ function main() {
   fs.writeFileSync(path.join(ROOT_DIR, 'sitemap.xml'), buildSitemapXml(apps), 'utf8');
   fs.writeFileSync(path.join(ROOT_DIR, 'robots.txt'), buildRobotsTxt(), 'utf8');
 
-  console.log(`Built J.apps successfully: ${apps.length} app pages, ${config.categories.length} categories, sitemap.xml, and robots.txt.`);
+  // 4. Assemble clean deployment bundle in dist/ (for Cloudflare Workers/Pages & Netlify)
+  buildDistFolder();
+
+  console.log(`Built J.apps successfully: ${apps.length} app pages, ${config.categories.length} categories, sitemap.xml, robots.txt, and dist/ bundle.`);
 }
 
 main();

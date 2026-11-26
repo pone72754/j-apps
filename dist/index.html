@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light" data-root="./">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-title-ar="J.apps - متجر ودليل تحميل الألعاب والتطبيقات" data-title-en="J.apps - Android Apps &amp; Games Directory">J.apps - متجر ودليل تحميل الألعاب والتطبيقات</title>
+  <meta name="description" content="متجر ودليل J.apps لتحميل أحدث الألعاب والتطبيقات بروابط مباشرة وآمنة ومعلومات كاملة.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://j-apps.jamaljamil77077.workers.dev/">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="J.apps">
+  <meta property="og:title" content="J.apps - متجر ودليل تحميل الألعاب والتطبيقات">
+  <meta property="og:description" content="متجر ودليل J.apps لتحميل أحدث الألعاب والتطبيقات بروابط مباشرة وآمنة ومعلومات كاملة.">
+  <meta property="og:url" content="https://j-apps.jamaljamil77077.workers.dev/">
+  <meta property="og:image" content="https://j-apps.jamaljamil77077.workers.dev/assets/images/logo.svg">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="J.apps - متجر ودليل تحميل الألعاب والتطبيقات">
+  <meta name="twitter:description" content="متجر ودليل J.apps لتحميل أحدث الألعاب والتطبيقات بروابط مباشرة وآمنة ومعلومات كاملة.">
+  <meta name="twitter:image" content="https://j-apps.jamaljamil77077.workers.dev/assets/images/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
+  <script>
+(function(){
+  try{
+    var t=localStorage.getItem('japps_theme');
+    if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}
+    var l=localStorage.getItem('japps_lang');
+    if(l!=='ar'&&l!=='en'){
+      var n=(navigator.language||navigator.userLanguage||'en').toLowerCase();
+      l=n.indexOf('ar')===0?'ar':'en';
+    }
+    document.documentElement.lang=l;
+    document.documentElement.dir=l==='ar'?'rtl':'ltr';
+  }catch(e){}
+})();
+</script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "J.apps",
+  "url": "https://j-apps.jamaljamil77077.workers.dev/",
+  "description": "متجر ودليل J.apps لتحميل أحدث الألعاب والتطبيقات بروابط مباشرة وآمنة ومعلومات كاملة.",
+  "inLanguage": [
+    "ar",
+    "en"
+  ]
+}
+  </script>
+</head>
+<body>
+<div class="brand-top-bar"></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="./index.html" aria-label="J.apps">
+      <div class="brand-logo">
+        <img src="./assets/images/logo.svg" alt="J.apps logo" width="40" height="40">
+      </div>
+      <span class="brand-name">J<span class="brand-dot">.</span>apps</span>
+    </a>
+
+    <!-- الترتيب المطلوب في RTL (من اليمين لليسار): بحث ← لغة ← وضع ليلي ← قائمة -->
+    <div class="header-controls">
+      <div class="header-search">
+        <div class="search-input-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input id="site-search-input" class="search-input" type="search" autocomplete="off" placeholder="ابحث عن تطبيق أو لعبة..." aria-label="ابحث عن تطبيق أو لعبة...">
+        </div>
+        <div id="site-search-results" class="search-results" role="listbox" aria-live="polite"></div>
+      </div>
+
+      <button id="lang-toggle-btn" class="icon-btn lang-btn" type="button" title="Switch to English" aria-label="Switch to English">EN</button>
+
+      <button id="theme-toggle-btn" class="icon-btn" type="button" title="تبديل الوضع الليلي والنهاري" aria-label="تبديل الوضع الليلي والنهاري">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+      </button>
+
+      <button id="menu-toggle-btn" class="icon-btn icon-btn--menu" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="فتح القائمة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+<nav id="nav-drawer" class="nav-drawer" aria-hidden="true" aria-label="Site Navigation">
+  <div class="nav-drawer-header">
+    <span class="nav-drawer-title" data-i18n="menuTitle">أقسام الموقع</span>
+    <button id="nav-close-btn" class="icon-btn" type="button" aria-label="إغلاق القائمة">✕</button>
+  </div>
+  <ul class="nav-list">
+      <li>
+        <a class="nav-link active" href="./index.html" data-i18n="navHome">الرئيسية</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./games.html" data-i18n="navGames">ألعاب</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./apps.html" data-i18n="navApps">تطبيقات</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./store.html" data-i18n="navStore">متجر</a>
+      </li>
+      <li>
+        <a class="nav-link" href="./contact.html" data-i18n="navContact">تواصل</a>
+      </li>
+  </ul>
+</nav>
+
+<main class="main-content">
+  <div class="container">
+
+    <!-- 1. مربع إعلان رئيسي (1) -->
+    <div class="ad-slot" role="region" aria-label="Advertisement">
+  <!-- AD_MAIN_1 -->
+  <span data-i18n="adLabel">مساحة إعلانية</span>
+</div>
+
+    <!-- 2. قسم آخر التطبيقات المضافة -->
+    <section class="section-block" aria-labelledby="sec-latest">
+      <div class="section-header">
+        <h2 id="sec-latest" class="section-title" data-i18n="latestTitle">آخر التطبيقات المضافة</h2>
+        <a class="view-more-btn" href="./latest.html" data-i18n="viewMore">عرض المزيد</a>
+      </div>
+      <div class="apps-grid">
+        <a class="app-card" href="./apps/poppy-playtime-chapter-5-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/Poppy-Playtime-Chapter-5-apk-logo-media.webp&amp;width=160" alt="Poppy Playtime Chapter 5 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 5 APK" data-en="Poppy Playtime Chapter 5 APK">Poppy Playtime Chapter 5 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">3.7 GB</span>
+      <span class="meta-badge meta-badge--red">v1.0.19v</span>
+      <span class="meta-badge meta-badge--neutral">Android 7.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-4-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-logo-media.webp&amp;width=160" alt="Poppy Playtime Chapter 4 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 4 APK" data-en="Poppy Playtime Chapter 4 APK">Poppy Playtime Chapter 4 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">1.8 GB</span>
+      <span class="meta-badge meta-badge--red">v1.0.6v</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-3-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2023/12/Poppy-Playtime-Chapter-3-APK-logo.webp&amp;width=160" alt="Poppy Playtime Chapter 3 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 3 APK" data-en="Poppy Playtime Chapter 3 APK">Poppy Playtime Chapter 3 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">2.2 GB</span>
+      <span class="meta-badge meta-badge--red">v1.0.26v</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-2-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/08/unnamed-41.webp&amp;width=160" alt="Poppy Playtime Chapter 2 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 2 APK" data-en="Poppy Playtime Chapter 2 APK">Poppy Playtime Chapter 2 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">1.2 GB</span>
+      <span class="meta-badge meta-badge--red">v1.42v</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-1-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1.png" alt="بوبي بلاي تايم للجوال" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="بوبي بلاي تايم للجوال" data-en="Poppy Playtime Chapter 1 APK">بوبي بلاي تايم للجوال</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">582 MB</span>
+      <span class="meta-badge meta-badge--red">vv1.0.18</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+      </div>
+    </section>
+
+    <!-- 3. قسم الألعاب -->
+    <section class="section-block" aria-labelledby="sec-games">
+      <div class="section-header">
+        <h2 id="sec-games" class="section-title" data-i18n="gamesTitle">الألعاب</h2>
+        <a class="view-more-btn" href="./games.html" data-i18n="viewMore">عرض المزيد</a>
+      </div>
+      <div class="apps-grid">
+        <a class="app-card" href="./apps/poppy-playtime-chapter-5-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/Poppy-Playtime-Chapter-5-apk-logo-media.webp&amp;width=160" alt="Poppy Playtime Chapter 5 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 5 APK" data-en="Poppy Playtime Chapter 5 APK">Poppy Playtime Chapter 5 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">3.7 GB</span>
+      <span class="meta-badge meta-badge--red">v1.0.19v</span>
+      <span class="meta-badge meta-badge--neutral">Android 7.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-4-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-logo-media.webp&amp;width=160" alt="Poppy Playtime Chapter 4 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 4 APK" data-en="Poppy Playtime Chapter 4 APK">Poppy Playtime Chapter 4 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">1.8 GB</span>
+      <span class="meta-badge meta-badge--red">v1.0.6v</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-3-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2023/12/Poppy-Playtime-Chapter-3-APK-logo.webp&amp;width=160" alt="Poppy Playtime Chapter 3 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 3 APK" data-en="Poppy Playtime Chapter 3 APK">Poppy Playtime Chapter 3 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">2.2 GB</span>
+      <span class="meta-badge meta-badge--red">v1.0.26v</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-2-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/08/unnamed-41.webp&amp;width=160" alt="Poppy Playtime Chapter 2 APK" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="Poppy Playtime Chapter 2 APK" data-en="Poppy Playtime Chapter 2 APK">Poppy Playtime Chapter 2 APK</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">1.2 GB</span>
+      <span class="meta-badge meta-badge--red">v1.42v</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+        <a class="app-card" href="./apps/poppy-playtime-chapter-1-apk.html">
+  <div class="app-card-icon-wrap">
+    <img class="app-card-icon" src="https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1.png" alt="بوبي بلاي تايم للجوال" loading="lazy" referrerpolicy="no-referrer" width="72" height="72" onerror="this.onerror=null;this.src='./assets/images/default-icon.svg';">
+  </div>
+  <div class="app-card-body">
+    <h3 class="app-card-title" data-ar="بوبي بلاي تايم للجوال" data-en="Poppy Playtime Chapter 1 APK">بوبي بلاي تايم للجوال</h3>
+    <div class="app-card-badges">
+      <span class="meta-badge meta-badge--blue">582 MB</span>
+      <span class="meta-badge meta-badge--red">vv1.0.18</span>
+      <span class="meta-badge meta-badge--neutral">Android 5.0+</span>
+    </div>
+  </div>
+</a>
+      </div>
+    </section>
+
+    <!-- 4. مربع إعلان رئيسي (2) -->
+    <div class="ad-slot" role="region" aria-label="Advertisement">
+  <!-- AD_MAIN_2 -->
+  <span data-i18n="adLabel">مساحة إعلانية</span>
+</div>
+
+    <!-- 5. قسم التطبيقات -->
+    <section class="section-block" aria-labelledby="sec-apps">
+      <div class="section-header">
+        <h2 id="sec-apps" class="section-title" data-i18n="appsTitle">التطبيقات</h2>
+        <a class="view-more-btn" href="./apps.html" data-i18n="viewMore">عرض المزيد</a>
+      </div>
+      <div class="apps-grid">
+        
+      </div>
+    </section>
+
+    <!-- 6. مربع إعلان رئيسي (3) -->
+    <div class="ad-slot" role="region" aria-label="Advertisement">
+  <!-- AD_MAIN_3 -->
+  <span data-i18n="adLabel">مساحة إعلانية</span>
+</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span data-i18n="footerRights">جميع الحقوق محفوظة © J.apps</span>
+    <div class="footer-links">
+      <a href="./index.html" data-i18n="navHome">الرئيسية</a>
+      <a href="./games.html" data-i18n="navGames">ألعاب</a>
+      <a href="./apps.html" data-i18n="navApps">تطبيقات</a>
+      <a href="./store.html" data-i18n="navStore">متجر</a>
+      <a href="./contact.html" data-i18n="navContact">تواصل</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/search-index.js" defer></script>
+<script src="./assets/js/app.js" defer></script>
+</body>
+</html>
