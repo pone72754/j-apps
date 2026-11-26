@@ -1,4 +1,116 @@
 {
   "_تعليمات_الإضافة": "لإضافة تطبيق أو لعبة جديدة: انسخ أحد العناصر داخل مصفوفة apps وعدّل الحقول (slug بالإنجليزية بدون مسافات، name_ar، name_en، category أحد القيم games أو apps أو store أو social، size، version، os، icon، screenshots، description_ar، description_en، download_url، updated_at بصيغة YYYY-MM-DD)، ثم شغّل الأمر: node build.js لتحديث الموقع بالكامل تلقائياً.",
-  "apps": []
+  "apps": [
+    {
+      "slug": "poppy-playtime-chapter-5-apk",
+      "name_ar": "Poppy Playtime Chapter 5 APK",
+      "name_en": "Poppy Playtime Chapter 5 APK",
+      "category": "games",
+      "size": "3.7 GB",
+      "version": "1.0.19v",
+      "os": "Android 7.0+",
+      "license": "مجاني",
+      "icon": "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/Poppy-Playtime-Chapter-5-apk-logo-media.webp&width=160",
+      "screenshots": [
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/poppy-playtime-chapter-5-apk-1-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/poppy-playtime-chapter-5-apk-2-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/poppy-playtime-chapter-5-apk-3-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/poppy-playtime-chapter-5-apk-4-media.jpg",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/poppy-playtime-chapter-5-apk-5-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2026/05/poppy-playtime-chapter-5-apk-6-media.webp"
+      ],
+      "description_ar": "Welcome to Poppy Playtime Chapter 5 APK for Android\nIf you love spooky games that make your heart race, then Poppy Playtime Chapter 5 is just for you! This game is all about solving puzzles and exploring a creepy, old toy factory. Imagine walking through dark hallways where shadows seem to move, and every sound makes you jump.\nhat’s what Poppy Playtime Chapter 5 feels like! It’s a game that will keep you on the edge of your seat, and it’s now available for Android devices. Let’s dive into what makes this game so exciting and how you can get it on your phone.\n\nWhat is Poppy Playtime Chapter 5?\nPoppy Playtime Chapter 5 is the latest part of a series of games set in the mysterious Playtime Co. factory. This factory was once a happy place where toys were made, but now, it’s abandoned and full of secrets. In this chapter, you return to the deepest, most forgotten parts of the factory.\n\nThe air is colder, the shadows are longer, and the sense of mystery is even stronger. Your mission is to explore these eerie places, solve puzzles, and uncover the story behind the factory. It’s like being a detective in a haunted house full of surprises!",
+      "description_en": "Welcome to Poppy Playtime Chapter 5 APK for Android\nIf you love spooky games that make your heart race, then Poppy Playtime Chapter 5 is just for you! This game is all about solving puzzles and exploring a creepy, old toy factory. Imagine walking through dark hallways where shadows seem to move, and every sound makes you jump.\nhat’s what Poppy Playtime Chapter 5 feels like! It’s a game that will keep you on the edge of your seat, and it’s now available for Android devices. Let’s dive into what makes this game so exciting and how you can get it on your phone.\n\nWhat is Poppy Playtime Chapter 5?\nPoppy Playtime Chapter 5 is the latest part of a series of games set in the mysterious Playtime Co. factory. This factory was once a happy place where toys were made, but now, it’s abandoned and full of secrets. In this chapter, you return to the deepest, most forgotten parts of the factory.\n\nThe air is colder, the shadows are longer, and the sense of mystery is even stronger. Your mission is to explore these eerie places, solve puzzles, and uncover the story behind the factory. It’s like being a detective in a haunted house full of surprises!",
+      "download_url": "https://cdn902.onehost.io/2023/Poppy_Playtime_Chapter_5_1.0.19_1794933980_latestmodapks.com.apk",
+      "updated_at": "2026-11-26"
+    },
+    {
+      "slug": "poppy-playtime-chapter-4-apk",
+      "name_ar": "Poppy Playtime Chapter 4 APK",
+      "name_en": "Poppy Playtime Chapter 4 APK",
+      "category": "games",
+      "size": "1.8 GB",
+      "version": "1.0.6v",
+      "os": "Android 5.0+",
+      "license": "مجاني",
+      "icon": "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-logo-media.webp&width=160",
+      "screenshots": [
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-1-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-2-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-3-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-4-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-5-media.webp",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2025/03/Poppy-Playtime-Chapter-4-Apk-6-media.webp"
+      ],
+      "description_ar": "Poppy Playtime Chapter 4 is here, and it’s ready to give you chills and thrills like never before! This chapter is a fantastic mix of horror, strategy, and storytelling that will keep you on the edge of your seat.\n\nWhether you’re a fan of spooky games or just love a good story, Poppy Playtime Chapter 4 has something for everyone. Let’s dive into what makes this game so exciting and how you can easily download and enjoy it on your Android device.\n\nWhat is Poppy Playtime Chapter 4?\nPoppy Playtime Chapter 4 is the latest installment in the Poppy Playtime series. This game is known for its creepy atmosphere and engaging gameplay. In this chapter, players are taken deeper into the mysterious world of Poppy Playtime, where they must solve puzzles, avoid dangers, and uncover secrets. The game combines elements of horror and strategy, making it a thrilling experience for players who love a good scare.\n\nThe story continues from where the last chapter left off, with new challenges and mysteries to unravel. Players must use their wits and skills to navigate through the eerie environments and survive the horrors that lurk within. The game is designed to keep you on your toes, with unexpected twists and turns that will keep you guessing until the very end.\n\nFeatures of Poppy Playtime Chapter 4\nPoppy Playtime Chapter 4 is packed with features that make it a must-play for horror game enthusiasts. Here are some of the highlights:",
+      "description_en": "Poppy Playtime Chapter 4 is here, and it’s ready to give you chills and thrills like never before! This chapter is a fantastic mix of horror, strategy, and storytelling that will keep you on the edge of your seat.\n\nWhether you’re a fan of spooky games or just love a good story, Poppy Playtime Chapter 4 has something for everyone. Let’s dive into what makes this game so exciting and how you can easily download and enjoy it on your Android device.\n\nWhat is Poppy Playtime Chapter 4?\nPoppy Playtime Chapter 4 is the latest installment in the Poppy Playtime series. This game is known for its creepy atmosphere and engaging gameplay. In this chapter, players are taken deeper into the mysterious world of Poppy Playtime, where they must solve puzzles, avoid dangers, and uncover secrets. The game combines elements of horror and strategy, making it a thrilling experience for players who love a good scare.\n\nThe story continues from where the last chapter left off, with new challenges and mysteries to unravel. Players must use their wits and skills to navigate through the eerie environments and survive the horrors that lurk within. The game is designed to keep you on your toes, with unexpected twists and turns that will keep you guessing until the very end.\n\nFeatures of Poppy Playtime Chapter 4\nPoppy Playtime Chapter 4 is packed with features that make it a must-play for horror game enthusiasts. Here are some of the highlights:",
+      "download_url": "https://www.4sync.com/web/directDownload/e9QBIsKQ/nSxqp12o.c6fd0f78ad4c0c4990cb51d847c934cf",
+      "updated_at": "2026-11-26"
+    },
+    {
+      "slug": "poppy-playtime-chapter-3-apk",
+      "name_ar": "Poppy Playtime Chapter 3 APK",
+      "name_en": "Poppy Playtime Chapter 3 APK",
+      "category": "games",
+      "size": "2.2 GB",
+      "version": "1.0.26v",
+      "os": "Android 5.0+",
+      "license": "مجاني",
+      "icon": "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2023/12/Poppy-Playtime-Chapter-3-APK-logo.webp&width=160",
+      "screenshots": [
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2023/12/Poppy-Playtime-Chapter-3-APK-1.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2023/12/Poppy-Playtime-Chapter-3-APK-2.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2023/12/Poppy-Playtime-Chapter-3-APK-3.webp&height=250"
+      ],
+      "description_ar": "Hey there, gaming buddies! Are you ready to dive into the latest buzz in the gaming world? Today, we’re discussing something super exciting – “Poppy Playtime Chapter 3 APK”!\n\nFirst, let’s understand what Poppy Playtime is all about. This excellent horror puzzle-adventure game has been sending shivers down players’ spines since it first came out. You play as a former toy factory employee where things have gone eerily wrong. The toys aren’t just cute and cuddly; they are alive and not friendly!\n\nNow, for those who’ve already tiptoed through Chapters 1 and 2 with bated breath, I know you can hardly wait to see what spooky surprises await in Chapter 3.\n\nBut here’s the thing: As much as we’d love to grab our phones or tablets and download an APK (that stands for Android Package Kit – it’s like a box full of everything your device needs to install an app) for Chapter 3 right now… well, hold onto your flashlights becaus\nAs far as official news goes (and trust me when I say you want the real deal), Poppy Playtime Chapter 3 hasn’t been released yet at my last check-in before writing this post. That means any links claiming to offer “Chapter 3 APK” could be misleading or even dangerous fakes trying to trick eager gamers like us.",
+      "description_en": "Hey there, gaming buddies! Are you ready to dive into the latest buzz in the gaming world? Today, we’re discussing something super exciting – “Poppy Playtime Chapter 3 APK”!\n\nFirst, let’s understand what Poppy Playtime is all about. This excellent horror puzzle-adventure game has been sending shivers down players’ spines since it first came out. You play as a former toy factory employee where things have gone eerily wrong. The toys aren’t just cute and cuddly; they are alive and not friendly!\n\nNow, for those who’ve already tiptoed through Chapters 1 and 2 with bated breath, I know you can hardly wait to see what spooky surprises await in Chapter 3.\n\nBut here’s the thing: As much as we’d love to grab our phones or tablets and download an APK (that stands for Android Package Kit – it’s like a box full of everything your device needs to install an app) for Chapter 3 right now… well, hold onto your flashlights becaus\nAs far as official news goes (and trust me when I say you want the real deal), Poppy Playtime Chapter 3 hasn’t been released yet at my last check-in before writing this post. That means any links claiming to offer “Chapter 3 APK” could be misleading or even dangerous fakes trying to trick eager gamers like us.",
+      "download_url": "https://cdn903.onehost.io/2023/Poppy_Playtime_Chapter_3_1.0.25_1733741527_latestmodapks.com.apk",
+      "updated_at": "2026-11-26"
+    },
+    {
+      "slug": "poppy-playtime-chapter-2-apk",
+      "name_ar": "Poppy Playtime Chapter 2 APK",
+      "name_en": "Poppy Playtime Chapter 2 APK",
+      "category": "games",
+      "size": "1.2 GB",
+      "version": "1.42v",
+      "os": "Android 5.0+",
+      "license": "مجاني",
+      "icon": "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/08/unnamed-41.webp&width=160",
+      "screenshots": [
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime1-scaled.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime2-scaled.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime3-scaled.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime5-scaled.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime6-scaled.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime7-scaled.webp&height=250",
+        "https://imgcdn.latestmodapks.com/api/resize?url=https://www.latestmodapks.com/wp-content/uploads/2022/09/Playtime8-scaled.webp&height=250"
+      ],
+      "description_ar": "Poppy Playtime Chapter 2 Apk is a horror game for children. In it, you look around different places such as an old factory and empty warehouse to find other toys and save Poppy. You have to complete various tasks in order to reach her. This version of the game is even scarier than the first one, so be prepared for some scary moments with dangerous toys!\n\nAbout Poppy Playtime Chapter 2 Apk\nIn Poppy Playtime Chapter 2 Apk, you must rescue Poppy from the evil toys. Explore the toy factory, train station, old warehouse, electric room, and other haunted locations to find the clues to the next mission. To reach Poppy, you have to complete three primary levels. All the details are available in the game, and you should follow the rules to unlock the achievements.\n\nThe game has many scary scenes, so if you’re under 13, make sure you’re near your Guardian or play the game under proper guidance. If you play the game, you’ll reveal the dark truth about the toy house and follow the facts to save the Poppy.\n\nFeatures of Poppy Playtime Chapter 2 Apk\nIt’s the Poppy Playtime Chapter 2 Apk, and new maps and graphics are available in this chapter.",
+      "description_en": "Poppy Playtime Chapter 2 Apk is a horror game for children. In it, you look around different places such as an old factory and empty warehouse to find other toys and save Poppy. You have to complete various tasks in order to reach her. This version of the game is even scarier than the first one, so be prepared for some scary moments with dangerous toys!\n\nAbout Poppy Playtime Chapter 2 Apk\nIn Poppy Playtime Chapter 2 Apk, you must rescue Poppy from the evil toys. Explore the toy factory, train station, old warehouse, electric room, and other haunted locations to find the clues to the next mission. To reach Poppy, you have to complete three primary levels. All the details are available in the game, and you should follow the rules to unlock the achievements.\n\nThe game has many scary scenes, so if you’re under 13, make sure you’re near your Guardian or play the game under proper guidance. If you play the game, you’ll reveal the dark truth about the toy house and follow the facts to save the Poppy.\n\nFeatures of Poppy Playtime Chapter 2 Apk\nIt’s the Poppy Playtime Chapter 2 Apk, and new maps and graphics are available in this chapter.",
+      "download_url": "https://cdn446.onehost.io/2023/Poppy_Playtime_Chapter_2_1.42_1730227580_latestmodapks.com.apk",
+      "updated_at": "2026-11-26"
+    },
+    {
+      "slug": "poppy-playtime-chapter-1-apk",
+      "name_ar": "بوبي بلاي تايم للجوال",
+      "name_en": "Poppy Playtime Chapter 1 APK",
+      "category": "games",
+      "size": "582 MB",
+      "version": "v1.0.18",
+      "os": "Android 5.0+",
+      "license": "مجاني",
+      "icon": "https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1.png",
+      "screenshots": [
+        "https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1-1.webp",
+        "https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1-2.webp",
+        "https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1-3.webp",
+        "https://dl.apkawards.com/moda/dl8/games/com.MOBGames.PoppyMobileChap1/img/com.MOBGames.PoppyMobileChap1-4.webp"
+      ],
+      "description_ar": "Poppy Playtime Chapter 1 – already a classic horror-adventure structure in which players will move very quickly through the corridors and rooms of the toy factory. And all because they will be followed by a distraught animatronic, which, according to the authors’ idea, was just to entertain children. And not to terrify and bring death to everyone who gets into his lair. By an unfortunate coincidence, our main character just landed in this place. So, putting aside the panic, you need to think through the route in advance, avoid dead ends and at the same time work out a plan for the main escape from the current situation.",
+      "description_en": "Poppy Playtime Chapter 1 – already a classic horror-adventure structure in which players will move very quickly through the corridors and rooms of the toy factory. And all because they will be followed by a distraught animatronic, which, according to the authors’ idea, was just to entertain children. And not to terrify and bring death to everyone who gets into his lair. By an unfortunate coincidence, our main character just landed in this place. So, putting aside the panic, you need to think through the route in advance, avoid dead ends and at the same time work out a plan for the main escape from the current situation.",
+      "download_url": "https://dl.apkvision.org/Poppy-Playtime-Chapter-1/Poppy-Playtime-Chapter-1-v1-0-18-full-apkvision.apk",
+      "updated_at": "2026-11-26"
+    }
+  ]
 }
