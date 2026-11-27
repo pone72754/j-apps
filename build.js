@@ -360,6 +360,7 @@ function renderPageShell({
   <title data-title-ar="${escapeHtml(titleAr)}" data-title-en="${escapeHtml(titleEn)}">${escapeHtml(titleAr)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="UNliG0oEPRL7aXEjU2rmObnvjf65gHuxliYPewXpByc" />
   <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
 
   <!-- OpenGraph -->
